@@ -47,7 +47,15 @@ header .w{display:flex;align-items:center;justify-content:space-between;gap:20px
 nav{display:flex;gap:22px;font-size:14px;font-weight:600}
 nav a{color:var(--suave);text-decoration:none}
 nav a:hover{color:var(--teal)}
-header .btn{padding:10px 18px;font-size:14px}
+header .btn{padding:10px 18px;font-size:14px;white-space:nowrap;flex-shrink:0}
+header .btn .sm{display:none}
+.expande{margin-top:28px;border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+.expande summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:18px;font-weight:700;color:var(--teal)}
+.expande summary::-webkit-details-marker{display:none}
+.expande summary::after{content:"+";font-size:26px;line-height:1;font-weight:400;transition:transform .2s}
+.expande[open] summary::after{transform:rotate(45deg)}
+.expande summary:focus-visible{outline:3px solid var(--dorado);outline-offset:3px}
+.expande .grupos{margin-top:8px;padding-bottom:28px}
 section{padding-block:80px}
 /* hero */
 .hero .w{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
@@ -189,7 +197,12 @@ footer .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .pasos,.grupos,.posts{grid-template-columns:1fr}
   .retrato{max-width:360px}
   section{padding-block:56px}
-  header .btn{display:none}
+  header .btn{padding:9px 14px;font-size:13px}
+  header .btn .lg{display:none}
+  header .btn .sm{display:inline}
+  .marca b{font-size:19px}
+  .marca img{width:32px}
+  .marca small{font-size:10px}
   .remate{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -237,7 +250,7 @@ footer .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <header><div class="w">
   <a class="marca" href="#inicio"><img src="img/logo-corazon.png" alt=""><span><b>Dr. Óscar Figueroa C.</b><small>Salud metabólica</small></span></a>
   <nav aria-label="Secciones"><a href="#tendencias">Tendencias</a><a href="#doctor">El doctor</a><a href="#consulta">Consulta</a><a href="#blog">Blog</a><a href="#agenda">Agenda</a></nav>
-  <a class="btn" href="#agenda">Agendar consulta</a>
+  <a class="btn" href="#agenda"><span class="lg">Agendar consulta</span><span class="sm">Agendar</span></a>
 </div></header>
 
 <div id="vista-inicio">
@@ -265,10 +278,12 @@ footer .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <div class="ticker" aria-hidden="true"><div class="tk-fila "><div class="tk-pista"><span>Ozempic</span><span>Semaglutida</span><span>Wegovy</span><span>Rybelsus</span><span>Mounjaro</span><span>Tirzepatida</span><span>Zepbound</span><span>Saxenda</span><span>Liraglutida</span><span>Retatrutida</span><span>Péptidos para bajar de peso</span><span>BPC-157</span><span>Inyecciones para adelgazar</span><span>Metformina para bajar de peso</span><span>Dieta keto</span><span>Dieta cetogénica</span><span>Dieta carnívora</span><span>Dieta vegana</span><span>Dieta vegetariana</span><span>Dieta paleo</span><span>Dieta mediterránea</span><span>Dieta DASH</span><span>Baja en carbohidratos</span><span>Ozempic</span><span>Semaglutida</span><span>Wegovy</span><span>Rybelsus</span><span>Mounjaro</span><span>Tirzepatida</span><span>Zepbound</span><span>Saxenda</span><span>Liraglutida</span><span>Retatrutida</span><span>Péptidos para bajar de peso</span><span>BPC-157</span><span>Inyecciones para adelgazar</span><span>Metformina para bajar de peso</span><span>Dieta keto</span><span>Dieta cetogénica</span><span>Dieta carnívora</span><span>Dieta vegana</span><span>Dieta vegetariana</span><span>Dieta paleo</span><span>Dieta mediterránea</span><span>Dieta DASH</span><span>Baja en carbohidratos</span></div></div><div class="tk-fila rev"><div class="tk-pista"><span>Conteo de calorías</span><span>Conteo de macros</span><span>Dieta de la piña</span><span>Dieta de la luna</span><span>Ayuno intermitente</span><span>Fasting 16:8</span><span>OMAD</span><span>Ayuno de 72 horas</span><span>Café bulletproof</span><span>Vinagre de manzana</span><span>Glucose hacks</span><span>Monitor continuo de glucosa</span><span>Sin aceites de semillas</span><span>Ejercicio en ayunas</span><span>Berberina, el “Ozempic natural”</span><span>Pastillas quemagrasa</span><span>Té para adelgazar</span><span>Batidos sustitutos</span><span>Detox y jugos verdes</span><span>Cetonas exógenas</span><span>Picolinato de cromo</span><span>Colágeno</span><span>Sueros vitaminados</span><span>NAD+</span><span>Conteo de calorías</span><span>Conteo de macros</span><span>Dieta de la piña</span><span>Dieta de la luna</span><span>Ayuno intermitente</span><span>Fasting 16:8</span><span>OMAD</span><span>Ayuno de 72 horas</span><span>Café bulletproof</span><span>Vinagre de manzana</span><span>Glucose hacks</span><span>Monitor continuo de glucosa</span><span>Sin aceites de semillas</span><span>Ejercicio en ayunas</span><span>Berberina, el “Ozempic natural”</span><span>Pastillas quemagrasa</span><span>Té para adelgazar</span><span>Batidos sustitutos</span><span>Detox y jugos verdes</span><span>Cetonas exógenas</span><span>Picolinato de cromo</span><span>Colágeno</span><span>Sueros vitaminados</span><span>NAD+</span></div></div></div>
 <div class="w">
   <div class="tend-guia">
-    <h3>Antes de probar la próxima, tráela a consulta.</h3>
+    <h3>Antes de probar la próxima tendencia, tráela a consulta.</h3>
     <p>El Dr. Figueroa revisa contigo, con evidencia, qué sirve, para quién, con qué riesgos y cuándo vale la pena.</p>
   </div>
+  <details class="expande"><summary>Ver las 47 tendencias que el Dr. Figueroa revisa en consulta</summary>
   <div class="grupos"><div class="grupo"><h3>Medicamentos y péptidos</h3><p>Algunos tienen evidencia sólida. Todos requieren receta, evaluación y seguimiento.</p><ul><li>Ozempic</li><li>Semaglutida</li><li>Wegovy</li><li>Rybelsus</li><li>Mounjaro</li><li>Tirzepatida</li><li>Zepbound</li><li>Saxenda</li><li>Liraglutida</li><li>Retatrutida</li><li>Péptidos para bajar de peso</li><li>BPC-157</li><li>Inyecciones para adelgazar</li><li>Metformina para bajar de peso</li></ul></div><div class="grupo"><h3>Dietas</h3><p>Muchas funcionan unas semanas. La pregunta es si la puedes sostener y si es segura para ti.</p><ul><li>Dieta keto</li><li>Dieta cetogénica</li><li>Dieta carnívora</li><li>Dieta vegana</li><li>Dieta vegetariana</li><li>Dieta paleo</li><li>Dieta mediterránea</li><li>Dieta DASH</li><li>Baja en carbohidratos</li><li>Conteo de calorías</li><li>Conteo de macros</li><li>Dieta de la piña</li><li>Dieta de la luna</li></ul></div><div class="grupo"><h3>Ayunos y hábitos</h3><p>Útiles para algunas personas y riesgosos para otras, según tu salud y tus medicamentos.</p><ul><li>Ayuno intermitente</li><li>Fasting 16:8</li><li>OMAD</li><li>Ayuno de 72 horas</li><li>Café bulletproof</li><li>Vinagre de manzana</li><li>Glucose hacks</li><li>Monitor continuo de glucosa</li><li>Sin aceites de semillas</li><li>Ejercicio en ayunas</li></ul></div><div class="grupo"><h3>Suplementos y productos</h3><p>La mayoría tiene poca evidencia, y algunos interactúan con lo que ya tomas.</p><ul><li>Berberina, el “Ozempic natural”</li><li>Pastillas quemagrasa</li><li>Té para adelgazar</li><li>Batidos sustitutos</li><li>Detox y jugos verdes</li><li>Cetonas exógenas</li><li>Picolinato de cromo</li><li>Colágeno</li><li>Sueros vitaminados</li><li>NAD+</li></ul></div></div>
+  </details>
   <div class="remate">
     <div class="sello"><img src="img/logo-corazon.png" alt=""></div>
     <div><p class="q">Lo que buscas no es otra tendencia. Es un plan médico que puedas sostener.</p><p class="r"><a href="#blog">Lee lo que dice la evidencia en el blog</a></p></div>
