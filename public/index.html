@@ -167,7 +167,18 @@ section{padding-block:80px}
 .post .leer{font-size:14px;font-weight:700;color:var(--teal)}
 .post:hover h3{color:var(--teal)}
 /* cierre */
-.cierre{text-align:left}
+.cierre{text-align:left;background:var(--blanco);border-top:1px solid var(--linea)}
+.adios{list-style:none;padding:0;margin:18px 0 0;display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center}
+.adios li{font-family:var(--display);font-size:clamp(22px,2.6vw,30px);color:var(--suave)}
+.adios s{text-decoration-color:var(--dorado);text-decoration-thickness:2px}
+.adios li.si{color:var(--blanco);background:var(--teal);border-radius:999px;padding:2px 18px;font-style:italic}
+.voces{margin-top:56px;border-top:1px solid var(--linea);padding-top:32px}
+.voces-tit{font-size:15px;color:var(--suave)}
+.voces-tit strong{font-family:var(--display);font-size:30px;color:var(--teal);margin-right:6px;font-variant-numeric:lining-nums}
+.voces-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:18px}
+.voces blockquote{margin:0;background:var(--perla);border-radius:14px;padding:22px;font-family:var(--display);font-size:22px;line-height:1.3;min-width:0}
+.voces cite{display:block;font-family:var(--body);font-style:normal;font-size:13px;color:var(--suave);margin-top:10px}
+@media (max-width:700px){.voces-grid{grid-template-columns:1fr}}
 .cierre h2{font-size:clamp(42px,6.4vw,74px)}
 .cierre p.sub{color:var(--suave);font-size:19px;margin-top:16px;max-width:46ch}
 .cierre .acc{margin-top:36px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
@@ -403,9 +414,18 @@ footer .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <section class="cierre" id="agenda"><div class="w">
   <p class="eyebrow">Agenda</p>
-  <h2 style="margin-top:12px">Se acabó volver a empezar.</h2>
+  <ul class="adios" aria-label="Lo que dejas atrás"><li><s>Otra dieta</s></li><li><s>Otra tendencia</s></li><li><s>“Desde el lunes”</s></li><li><s>Otro intento</s></li><li class="si">Un tratamiento</li></ul>
+  <h2 style="margin-top:22px">Se acabó volver a empezar.</h2>
   <p class="sub">Que este sea el último primer paso. Escríbenos y agendamos tu primera consulta en zona 10, en tu casa o por video.</p>
   <div class="acc"><a class="btn" href="#agenda">Escribir por WhatsApp</a><span class="tel">Tel. 2361-2611</span></div>
+  <div class="voces">
+    <p class="voces-tit"><strong>10/10</strong> en todas sus reseñas de Doctoranytime</p>
+    <div class="voces-grid">
+      <blockquote>“Me sentí atendido con respeto y confianza en todo momento.”<cite>Mario · consulta virtual</cite></blockquote>
+      <blockquote>“Me sentí muy cómoda durante la consulta, un profesional de calidad.”<cite>Valeria · Doctoranytime</cite></blockquote>
+      <blockquote>“Lo recomendamos mil veces.”<cite>Claudia · visita a domicilio para su padre</cite></blockquote>
+    </div>
+  </div>
 </div></section>
 </main>
 </div>
